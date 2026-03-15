@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Venta de tejidos ZULE</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<header class="hero">
+
+<h1 class="titulo">Venta de tejidos ZULE</h1>
+
+<p>Tejidos artesanales hechos con amor</p>
+
+<div class="botones">
+
+<button onclick="mostrarContacto()">Contacto</button>
+<button onclick="mostrarUbicacion()">Ubicación</button>
+
+</div>
+
+</header>
+
+
+<section class="catalogo">
+
+<h2>Nuestros tejidos</h2>
+
+<div class="grid" id="productos"></div>
+
+</section>
+
+
+
+<section class="pedido">
+
+<h2>Pide tu diseño personalizado</h2>
+
+<textarea id="mensajeCliente"
+placeholder="Escribe el tipo de tejido o diseño que deseas..."></textarea>
+
+<button onclick="enviarWhatsApp()">Enviar solicitud</button>
+
+</section>
+
+
+
+<section class="testimonios">
+
+<h2>Opiniones de nuestros clientes</h2>
+
+<div class="contenedor-testimonios">
+
+<div class="testimonio">
+<div class="estrellas">★★★★★</div>
+<p>Los tejidos son hermosos y muy bien hechos.</p>
+<h4>María G.</h4>
+</div>
+
+<div class="testimonio">
+<div class="estrellas">★★★★★</div>
+<p>Excelente calidad y muy buena atención.</p>
+<h4>Laura P.</h4>
+</div>
+
+<div class="testimonio">
+<div class="estrellas">★★★★★</div>
+<p>Me hicieron un diseño personalizado y quedó perfecto.</p>
+<h4>Ana C.</h4>
+</div>
+
+<div class="testimonio">
+<div class="estrellas">★★★★★</div>
+<p>Muy rápidos y los tejidos son preciosos.</p>
+<h4>Daniela R.</h4>
+</div>
+
+<div class="testimonio">
+<div class="estrellas">★★★★★</div>
+<p>Recomiendo mucho esta tienda, muy profesionales.</p>
+<h4>Claudia M.</h4>
+</div>
+
+<div class="testimonio">
+<div class="estrellas">★★★★★</div>
+<p>Compré varios tejidos y todos son hermosos.</p>
+<h4>Yanelis T.</h4>
+</div>
+
+</div>
+
+</section>
+
+
+
+<a href="https://wa.me/+5354827657" class="whatsapp" target="_blank">
+
+💬
+
+</a>
+
+
+
+<div class="modal" id="modal">
+
+<span class="cerrar" onclick="cerrarModal()">✖</span>
+
+<img id="imagenGrande">
+
+</div>
+
+
+<script src="main.js"></script>
+
+</body>
+</html>
