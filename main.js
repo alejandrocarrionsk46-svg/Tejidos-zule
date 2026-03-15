@@ -1,8 +1,8 @@
-const contenedor = document.getElementById("productos")
+const galeria=document.getElementById("galeria")
 
-for(let i=1;i<=20;i++){
+for(let i=1;i<=18;i++){
 
-contenedor.innerHTML += `
+galeria.innerHTML+=`
 
 <div class="card" onclick="abrirImagen('imagen${i}.jpg')">
 
@@ -16,58 +16,25 @@ contenedor.innerHTML += `
 
 
 
-const tarjetas = document.querySelectorAll(".card")
-
-function animar(){
-
-tarjetas.forEach(card=>{
-
-let posicion = card.getBoundingClientRect().top
-let pantalla = window.innerHeight
-
-if(posicion < pantalla-100){
-
-card.classList.add("mostrar")
-
-}
-
-})
-
-}
-
-window.addEventListener("scroll",animar)
-
-animar()
-
-
-
 function mostrarContacto(){
 
-alert("Contacto del dueño: 54827657")
+alert("Teléfono: 54827657")
 
 }
 
 function mostrarUbicacion(){
 
-alert("Ubicación: Carretera Peñalver km1 Los Asahares")
+alert("Ubicación: Carretera Peñalver klm1 los asahares")
 
 }
 
 
 
-function enviarWhatsApp(){
+function enviarPedido(){
 
-let mensaje = document.getElementById("mensajeCliente").value
+let texto=document.getElementById("mensaje").value
 
-let texto = "Hola, quiero solicitar un tejido personalizado. "
-
-if(mensaje !== ""){
-
-texto += "Diseño solicitado: " + mensaje
-
-}
-
-let url = "https://wa.me/5354827657?text=" + encodeURIComponent(texto)
+let url="https://wa.me/5354827657?text="+encodeURIComponent("Hola, quiero este diseño: "+texto)
 
 window.open(url)
 
@@ -75,12 +42,11 @@ window.open(url)
 
 
 
-/* MODAL */
-
 function abrirImagen(src){
 
 document.getElementById("modal").style.display="flex"
-document.getElementById("imagenGrande").src = src
+
+document.getElementById("imagenGrande").src=src
 
 }
 
