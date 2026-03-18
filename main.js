@@ -1,57 +1,39 @@
-const galeria=document.getElementById("galeria")
+// Animar galería al cargar
+window.addEventListener("load", () => {
+  const images = document.querySelectorAll(".gallery img");
+  images.forEach((img, index) => {
+    setTimeout(() => {
+      img.classList.add("fade-in-up");
+    }, index * 80);
+  });
+});
 
-for(let i=1;i<=18;i++){
+// Visor de imagen ampliada
+const imageViewer = document.getElementById("imageViewer");
+const viewerImg = document.getElementById("viewerImg");
 
-galeria.innerHTML+=`
+document.querySelectorAll(".gallery img").forEach(img => {
+  img.addEventListener("click", () => {
+    viewerImg.src = img.src;
+    imageViewer.classList.add("show");
+  });
+});
 
-<div class="card" onclick="abrirImagen('imagen${i}.jpg')">
+imageViewer.addEventListener("click", () => {
+  imageViewer.classList.remove("show");
+});
 
-<img src="imagen${i}.jpg">
+// Enviar pedido a WhatsApp
+const enviarBtn = document.getElementById("enviarPedido");
+const pedidoText = document.getElementById("pedidoText");
 
-</div>
+enviarBtn.addEventListener("click", () => {
+  const texto = pedidoText.value.trim();
+  if (!texto) {
+    alert("Por favor, escribe tu pedido antes de enviar.");
+    return;
+  }
 
-`
-
-}
-
-
-
-function mostrarContacto(){
-
-alert("Teléfono: 54827657")
-
-}
-
-function mostrarUbicacion(){
-
-alert("Ubicación: Carretera Peñalver klm1 los asahares")
-
-}
-
-
-
-function enviarPedido(){
-
-let texto=document.getElementById("mensaje").value
-
-let url="https://wa.me/5354827657?text="+encodeURIComponent("Hola, quiero este diseño: "+texto)
-
-window.open(url)
-
-}
-
-
-
-function abrirImagen(src){
-
-document.getElementById("modal").style.display="flex"
-
-document.getElementById("imagenGrande").src=src
-
-}
-
-function cerrarModal(){
-
-document.getElementById("modal").style.display="none"
-
-}
+  const url = `https://wa.me/5354827657?text=${encodeURIComponent(texto)}`;
+  window.open(url, "_blank");
+});

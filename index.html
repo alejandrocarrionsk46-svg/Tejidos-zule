@@ -1,103 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Venta de Tejidos ZULE</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <title>VENTA DE TEJIDOS ZULE</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="hero">
+  <header class="header">
+    <div class="brand">
+      <h1>VENTA DE TEJIDOS ZULE</h1>
+      <p>Calidad, estilo y elegancia en cada tejido</p>
+    </div>
+  </header>
 
-<h1 class="titulo">Venta de Tejidos ZULE</h1>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h2>CATÁLOGO DE TEJIDOS</h2>
+        <p>Explora nuestra selección de tejidos finos y elige el modelo ideal para tu diseño.</p>
+      </div>
+    </section>
 
-<p class="subtitulo">Tejidos artesanales hechos con amor</p>
+    <section class="gallery-section">
+      <div class="gallery">
+        <img src="imagen1.jpg" alt="Tejido 1">
+        <img src="imagen2.jpg" alt="Tejido 2">
+        <img src="imagen3.jpg" alt="Tejido 3">
+        <img src="imagen4.jpg" alt="Tejido 4">
+        <img src="imagen5.jpg" alt="Tejido 5">
+        <img src="imagen6.jpg" alt="Tejido 6">
+        <img src="imagen7.jpg" alt="Tejido 7">
+        <img src="imagen8.jpg" alt="Tejido 8">
+        <img src="imagen9.jpg" alt="Tejido 9">
+        <img src="imagen10.jpg" alt="Tejido 10">
+        <img src="imagen11.jpg" alt="Tejido 11">
+        <img src="imagen12.jpg" alt="Tejido 12">
+        <img src="imagen13.jpg" alt="Tejido 13">
+        <img src="imagen14.jpg" alt="Tejido 14">
+        <img src="imagen15.jpg" alt="Tejido 15">
+        <img src="imagen16.jpg" alt="Tejido 16">
+        <img src="imagen17.jpg" alt="Tejido 17">
+        <img src="imagen18.jpg" alt="Tejido 18">
+      </div>
+    </section>
 
-<div class="botones">
+    <section class="order-section">
+      <h2>Solicitar Pedido</h2>
+      <p>Escribe el modelo y los detalles de tu pedido. Te responderemos por WhatsApp.</p>
+      <textarea id="pedidoText" placeholder="Ejemplo: Quiero 3 metros del modelo de la imagen 5, color rosa pastel..."></textarea>
+      <button id="enviarPedido" class="btn-primary">Enviar a WhatsApp</button>
+    </section>
 
-<button onclick="mostrarContacto()">Contacto</button>
-<button onclick="mostrarUbicacion()">Ubicación</button>
+    <section class="info-section">
+      <h2>Contacto y Ubicación</h2>
+      <p><strong>Contacto:</strong> (+53)54827657</p>
+      <p><strong>Correo:</strong> zulecarrion@gmail.com</p>
+      <p><strong>Ubicación:</strong> Carretera Peñalver klm1 los Asahares </p>
+    </section>
+  </main>
 
-</div>
+  <!-- Visor de imagen ampliada -->
+  <div class="image-viewer" id="imageViewer">
+    <img id="viewerImg" src="" alt="Tejido ampliado">
+  </div>
 
-</header>
+  <footer class="footer">
+    <p>© 2026 VENTA DE TEJIDOS ZULE · Diseñado por Cristhyan Alejandro</p>
+  </footer>
 
-
-
-<section class="catalogo">
-
-<h2>Algunos de nuestros diseños</h2>
-
-<div class="galeria" id="galeria"></div>
-
-</section>
-
-
-
-<section class="pedido">
-
-<h2>Pide tu diseño personalizado</h2>
-
-<textarea id="mensaje" placeholder="Describe el tejido que deseas..."></textarea>
-
-<button onclick="enviarPedido()">Enviar solicitud</button>
-
-</section>
-
-
-
-<section class="testimonios">
-
-<h2>Opiniones de clientes</h2>
-
-<div class="contenedor-testimonios">
-
-<div class="testimonio">
-<div class="estrellas">★★★★★</div>
-<p>Los tejidos son hermosos y de excelente calidad.</p>
-</div>
-
-<div class="testimonio">
-<div class="estrellas">★★★★★</div>
-<p>Trabajo muy profesional y diseños preciosos.</p>
-</div>
-
-<div class="testimonio">
-<div class="estrellas">★★★★★</div>
-<p>Me encantó mi pedido personalizado.</p>
-</div>
-
-<div class="testimonio">
-<div class="estrellas">★★★★★</div>
-<p>La mejor tienda de tejidos que he visto.</p>
-</div>
-
-</div>
-
-</section>
-
-
-
-<a class="whatsapp" href="https://wa.me/+5354827657">💬</a>
-
-
-
-<div class="modal" id="modal">
-
-<span class="cerrar" onclick="cerrarModal()">✖</span>
-
-<img id="imagenGrande">
-
-</div>
-
-
-<script src="main.js"></script>
-
+  <script src="main.js"></script>
 </body>
 </html>
